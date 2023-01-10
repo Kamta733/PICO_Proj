@@ -1,0 +1,27 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @OR_gate"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 80 -30 130 -30 {}
+L 4 80 0 130 0 {}
+L 4 120 -50 130 -30 {}
+L 4 130 -30 130 -0 {}
+L 4 120 20 130 0 {}
+L 4 120 -50 190 -20 {}
+L 4 120 20 190 -20 {}
+L 4 190 -20 230 -20 {}
+L 4 160 -60 160 -30 {}
+B 5 77.5 -2.5 82.5 2.5 {name=B
+dir=in}
+B 5 77.5 -32.5 82.5 -27.5 {name=A
+dir=in}
+B 5 227.5 -22.5 232.5 -17.5 {name=Y
+dir=out}
+B 5 157.5 -62.5 162.5 -57.5 {name=Vdd
+dir=in}
+T {@OR_gate} 180 -70 0 0 0.15 0.15 {}

@@ -1,0 +1,81 @@
+** sch_path: /foss/designs/untitled-3.sch
+**.subckt untitled-3 Q
+*.opin Q
+V1 Vs GND 0.6
+V2 net1 GND pulse(0 1 0 100p 100p 0.8m 1.6m)
+V4 RST GND pulse (0 1 6.4m 10n 10n 200m 200m)
+x7 t2 t4 t1 Vs GND NAND
+x8 t1 net1 RST Vs GND t2 NAND3
+x6 Q t3 RST Vs GND t5 NAND3
+x4 t2 net1 t4 Vs GND t3 NAND3
+x5 t3 t5 RST Vs GND t4 NAND3
+x2 t5 t2 Q Vs GND NAND
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /foss/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+.tran 10u 600m
+.save all
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  component/NAND2/NAND.sym # of pins=5
+** sym_path: /foss/designs/component/NAND2/NAND.sym
+** sch_path: /foss/designs/component/NAND2/NAND.sch
+.subckt NAND  B A Y VP VN
+*.iopin VP
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin VN
+XM1 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Y B VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 Y A net1 net1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 B VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  component/NAND3/NAND3.sym # of pins=6
+** sym_path: /foss/designs/component/NAND3/NAND3.sym
+** sch_path: /foss/designs/component/NAND3/NAND3.sch
+.subckt NAND3  A B C VP VN Y
+*.iopin VP
+*.iopin VN
+*.ipin A
+*.ipin B
+*.ipin C
+*.opin Y
+XM1 Y A net1 VN sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 B net2 VN sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net2 C VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 Y B VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 Y C VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end

@@ -1,0 +1,11 @@
+** sch_path: /foss/designs/current111.sch
+.subckt current111 VN VX CKS OUT
+*.PININFO VN:B VX:I CKS:I OUT:O
+XM1 OUT OUT VX OUT sky130_fd_pr__pfet_01v8 L=0.15 W=20 nf=60 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 VX CKS VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=20 nf=30 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+.end

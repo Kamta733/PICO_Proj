@@ -1,0 +1,148 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: ** sch_path: /foss/designs/blocks/startup converter/startup_cnv_2.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+binary raw file "/foss/designs/Blocks/Startup Converter/simulation/Startup_Cnv_2.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+No. of Data Columns : 703  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vs                                        0.07
+net9                                  0.059237
+cks_off                                      0
+net8                                  0.059237
+net7                                 0.0592378
+net6                                 0.0592384
+net5                                 0.0592385
+x1.net4                              0.0509277
+vout                                 0.0358307
+x1.net5                              0.0445035
+x1.net3                              0.0446091
+net1                                  0.035832
+x1.net6                              0.0273397
+x1.net2                              0.0430387
+x1.net1                              0.0145982
+x2.net4                              0.0509267
+x2.net5                              0.0445024
+x2.net3                              0.0446085
+net2                                 0.0358308
+x2.net6                              0.0273371
+x2.net2                              0.0430376
+x2.net1                              0.0145971
+x3.net4                              0.0509272
+x3.net5                              0.0445041
+x3.net3                                0.04461
+net3                                 0.0358332
+x3.net6                                0.02734
+x3.net2                              0.0430405
+x3.net1                              0.0145985
+x4.net4                              0.0509299
+x4.net5                              0.0445079
+x4.net3                              0.0446091
+net4                                  0.035836
+x4.net6                              0.0273406
+x4.net2                              0.0430406
+x4.net1                              0.0145983
+x5.net4                              0.0509281
+x5.net5                              0.0445046
+x5.net3                              0.0446077
+x5.net6                              0.0273367
+x5.net2                              0.0430389
+x5.net1                              0.0145965
+t2                                   0.0639987
+t1                                  0.00809833
+net15                                0.0672822
+t3                                   0.0594498
+t0                                   0.0648899
+net16                                0.0684406
+t5                                   0.0646974
+t4                                   0.0667507
+net14                                 0.066737
+t7                                   0.0683654
+t8                                   0.0662977
+net13                               0.00809887
+t10                                  0.0672872
+t9                                   0.0675982
+net18                                0.0683942
+net17                                 0.068808
+x7.net4                                0.06332
+x7.net5                              0.0584061
+x7.net3                              0.0577487
+net10                                0.0524582
+x7.net6                              0.0392302
+x7.net2                              0.0547851
+x7.net1                              0.0198923
+x8.net4                              0.0557539
+x8.net5                              0.0438042
+x8.net3                              0.0419099
+net11                                0.0223958
+x8.net6                              0.0173463
+x8.net2                              0.0447126
+x8.net1                              0.0096949
+x10.net4                             0.0674497
+x10.net5                             0.0661002
+x10.net3                              0.063792
+x10.net6                             0.0546667
+x10.net2                             0.0616337
+x10.net1                             0.0293513
+x6.net4                              0.0487723
+x6.net5                              0.0320139
+x6.net3                              0.0268919
+x6.net6                             0.00670074
+x6.net2                              0.0348595
+x6.net1                             0.00423908
+x9.net4                              0.0674517
+x9.net5                              0.0661007
+x9.net3                              0.0637925
+net12                                0.0648899
+x9.net6                              0.0546681
+x9.net2                              0.0616344
+x9.net1                              0.0293511
+x11.net4                             0.0487789
+x11.net5                             0.0320187
+x11.net3                             0.0268933
+x11.net6                            0.00670102
+x11.net2                             0.0348573
+x11.net1                            0.00423919
+x12.net4                             0.0689916
+x12.net5                             0.0686152
+x12.net3                             0.0668873
+x12.net6                             0.0646107
+x12.net2                             0.0666493
+x12.net1                             0.0427572
+net19                                0.0672822
+ckp                                    0.05945
+t6                                   0.0639988
+ckn                                  0.0662982
+t11                                  0.0667373
+net20                                0.0683944
+v2#branch                                    0
+v1#branch                          -1.1233e-10
+
+
+No. of Data Rows : 2008
+
+Total analysis time (seconds) = 1.143
+
+Total elapsed time (seconds) = 10.844 
+
+Total DRAM available = 7725.230 MB.
+DRAM currently available = 1632.906 MB.
+Maximum ngspice program size =  849.598 MB.
+Current ngspice program size =  663.754 MB.
+
+Shared ngspice pages =    8.938 MB.
+Text (code) pages =    4.934 MB.
+Stack = 0 bytes.
+Library pages =  775.504 MB.
+
