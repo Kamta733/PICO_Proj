@@ -1,0 +1,37 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"}
+V {}
+S {}
+E {}
+L 4 70 -40 70 10 {}
+L 4 70 20 130 20 {}
+L 4 130 20 150 20 {}
+L 4 150 -50 150 10 {}
+L 4 70 -50 150 -50 {}
+L 4 70 -50 70 -40 {}
+L 4 150 10 150 20 {}
+L 4 70 10 70 20 {}
+L 4 110 -60 110 -50 {}
+L 4 150 -20 160 -20 {}
+L 4 60 -30 70 -30 {}
+L 4 60 0 70 -0 {}
+L 4 110 20 110 30 {}
+B 5 57.5 -2.5 62.5 2.5 {name=CKS_OFF
+dir=in}
+B 5 57.5 -32.5 62.5 -27.5 {name=VP
+dir=inout}
+B 5 107.5 -62.5 112.5 -57.5 {name=V_bias
+dir=inout}
+B 5 107.5 27.5 112.5 32.5 {name=VN
+dir=inout}
+B 5 157.5 -22.5 162.5 -17.5 {name=CKS
+dir=out}
+T {Startup Converter} 90 -20 0 0 0.1 0.1 {}
+T {Vi} 60 -40 0 0 0.1 0.1 {}
+T {CKS_OFF} 40 10 0 0 0.1 0.1 {}
+T {ground} 120 30 0 0 0.1 0.1 {}
+T {CKS} 160 -30 0 0 0.1 0.1 {}
+T {V_bias} 90 -60 0 0 0.1 0.1 {}

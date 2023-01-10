@@ -1,0 +1,62 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: ** sch_path: /foss/designs/pico/akshat_comp/ezyzip/pico/comparator/com_sym_test.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+binary raw file "/foss/designs/pico/akshat_comp/ezyzip/PICO/Inverter/simulation/Com_sym_test.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: v3: no DC value, transient time 0 value used
+No. of Data Columns : 118  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+clk                                          0
+vin+                                       0.3
+vin-                                     0.301
+x1.net2                               0.246884
+x1.net3                               0.245772
+x1.net4                            3.08188e-08
+x1.net1                               0.478391
+x1.vdd                                     1.2
+x1.net5                                    1.2
+x1.net13                           6.22613e-08
+x1.net6                                    1.2
+x1.x1.net1                                 1.2
+x1.net7                            6.22615e-08
+x1.net8                                    1.2
+x1.net9                            6.22615e-08
+x1.net10                                   1.2
+out-                               3.16961e-08
+x1.net11                              0.434601
+x1.net12                                   1.2
+out+                                       1.2
+v.x1.v1#branch                     -7.7582e-11
+v5#branch                                    0
+v4#branch                                    0
+v3#branch                                    0
+
+
+No. of Data Rows : 719
+
+Total analysis time (seconds) = 0.22
+
+Total elapsed time (seconds) = 14.301 
+
+Total DRAM available = 7829.664 MB.
+DRAM currently available =  325.160 MB.
+Maximum ngspice program size =  849.625 MB.
+Current ngspice program size =  663.320 MB.
+
+Shared ngspice pages =    8.484 MB.
+Text (code) pages =    4.934 MB.
+Stack = 0 bytes.
+Library pages =  775.531 MB.
+

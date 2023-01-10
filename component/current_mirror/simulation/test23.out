@@ -1,0 +1,167 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: ** sch_path: /foss/designs/component/current_mirror/test23.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+binary raw file "/foss/designs/component/current_mirror/simulation/test23.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+No. of Data Columns : 851  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vx                                         0.4
+vdd                                        1.2
+vin+                                       0.3
+vin-                                     0.301
+x3.net4                                1.13442
+net5                                  0.582327
+x3.net3                               0.341905
+x3.net2                               0.871914
+x3.net1                              0.0580538
+x3.net5                                1.08854
+x3.net6                              0.0941616
+net1                                  0.582327
+x10.net4                               1.13442
+x10.net3                              0.341905
+x10.net2                              0.871914
+x10.net1                             0.0580538
+x10.net5                               1.08854
+x10.net6                             0.0941616
+net2                                  0.582327
+x11.net4                               1.13442
+x11.net3                              0.341905
+x11.net2                              0.871914
+x11.net1                             0.0580538
+x11.net5                               1.08854
+x11.net6                             0.0941616
+net3                                  0.582327
+x12.net4                               1.13442
+x12.net3                              0.341905
+x12.net2                              0.871914
+x12.net1                             0.0580538
+x12.net5                               1.08854
+x12.net6                             0.0941616
+net4                                  0.582327
+x13.net4                               1.13442
+x13.net3                              0.341906
+x13.net2                              0.871914
+x13.net1                             0.0580539
+x13.net5                               1.08854
+x13.net6                             0.0941617
+x14.net4                               1.13442
+x14.net3                              0.341905
+x14.net2                              0.871914
+x14.net1                             0.0580538
+x14.net5                               1.08854
+x14.net6                             0.0941616
+clkcheck                              0.582326
+x15.x2.net1                                1.2
+x15.net7                           1.20314e-07
+x15.net4                            0.00199057
+x15.x2.net2                                1.2
+clk                                6.22615e-08
+x15.x3.net3                                1.2
+x15.x3.net4                        1.72505e-07
+x15.x3.net2                           0.731948
+x15.x3.x7.net1                     3.44479e-08
+x15.x3.x8.net1                        0.513895
+x15.x3.x8.net2                      0.00025015
+x15.net6                                   1.2
+x15.x3.x6.net1                     1.93665e-10
+x15.x3.net1                                1.2
+x15.x3.x6.net2                     9.68324e-11
+x15.x3.x4.net1                        0.499296
+x15.x3.x4.net2                        0.360161
+x15.x3.x5.net1                     1.15003e-07
+x15.net3                                   1.2
+x15.x3.x5.net2                     5.75016e-08
+x15.x3.x1.net1                     0.000114191
+x15.x4.net3                        1.20314e-07
+x15.x4.net4                                1.2
+x15.x4.net2                                1.2
+x15.x4.x7.net1                     6.01568e-08
+x15.x4.x8.net1                     2.68047e-08
+x15.x4.x8.net2                     9.17321e-11
+x15.net5                            0.00132504
+x15.x4.x6.net1                      0.00125196
+x15.x4.net1                           0.731948
+x15.x4.x6.net2                     7.28431e-05
+x15.x4.x4.net1                        0.513895
+x15.x4.x4.net2                      0.00025015
+x15.x4.x5.net1                        0.513472
+x15.net2                           6.22615e-08
+x15.x4.x5.net2                     3.60695e-11
+x15.x4.x1.net1                         1.03491
+x15.x5.net4                        1.20314e-07
+x15.x5.net5                                1.2
+x15.x5.net2                                1.2
+x15.x5.x1.net1                     6.01568e-08
+x15.x5.x7.net1                      1.9522e-10
+x15.net1                               1.14522
+x15.x5.x7.net2                     9.17323e-11
+x15.x5.net3                                1.2
+x15.x5.x3.net1                       0.0184994
+x15.x5.net1                        3.36975e-07
+x15.x5.x3.net2                     5.89781e-12
+x15.x5.x4.net1                     2.29252e-07
+x15.x5.x4.net2                     1.07724e-07
+x15.x5.x5.net1                       0.0184228
+x15.x5.x5.net2                     6.21671e-12
+x15.x5.x6.net1                     6.01568e-08
+x15.net8                                   1.2
+x15.x7.net1                        2.13424e-09
+x1.net1                               0.955709
+net6                                  0.399958
+x1.net2                               0.194369
+out                                   0.944304
+clkcheck1                             0.607381
+clkcheck2                             0.607415
+net7                                  0.944304
+x2.net1                               0.478392
+x2.clkb1                                   1.2
+x2.o1-                                0.245771
+x2.o1+                                0.246884
+x2.net5                                1.19869
+x2.clkb2                           6.22615e-08
+x2.net7                               0.902623
+x2.net6                                0.90179
+x2.net2                            3.08189e-08
+x2.net8                            4.48419e-08
+x2.inv                                     1.2
+x2.net9                               0.244539
+x2.net11                           5.21974e-09
+x2.net10                                   1.2
+x2.net12                                   1.2
+x2.net13                           5.21974e-09
+x2.net3                            6.22615e-08
+x2.net4                                    1.2
+v5#branch                                    0
+v1#branch                                    0
+vdd#branch                         -1.6752e-05
+v4#branch                         -4.19243e-10
+
+
+No. of Data Rows : 45977
+
+Total analysis time (seconds) = 168.31
+
+Total elapsed time (seconds) = 186.691 
+
+Total DRAM available = 7829.664 MB.
+DRAM currently available = 1224.715 MB.
+Maximum ngspice program size =  849.582 MB.
+Current ngspice program size =  663.695 MB.
+
+Shared ngspice pages =    8.891 MB.
+Text (code) pages =    4.934 MB.
+Stack = 0 bytes.
+Library pages =  775.488 MB.
+

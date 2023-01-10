@@ -1,0 +1,101 @@
+** sch_path: /foss/designs/untitled-3.sch
+**.subckt untitled-3 Clk Clk RST Clk/2 Clk/4
+*.opin Clk
+*.ipin Clk
+*.opin RST
+*.opin Clk/2
+*.opin Clk/4
+V1 Vs GND 0.6
+V2 Clk GND pulse(0 1 0 100p 100p 800u 1600u)
+V4 RST GND pulse (0 1 2u 10n 10n 200m 200m)
+x1 net1 Clk RST GND Vs Clk/2 net1 DFF1
+x2 net2 Clk/2 RST GND Vs Clk/4 net2 DFF1
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /foss/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+.tran 10u 800m
+.save all
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  component/FlipFlops/DFF1.sym # of pins=7
+** sym_path: /foss/designs/component/FlipFlops/DFF1.sym
+** sch_path: /foss/designs/component/FlipFlops/DFF1.sch
+.subckt DFF1  D Clk RST VN VP Q Qb
+*.opin Q
+*.iopin VN
+*.iopin VP
+*.ipin Clk
+*.ipin D
+*.ipin RST
+*.opin Qb
+x7 net2 net4 net3 VP VN NAND
+x8 net3 Clk RST VP VN net2 NAND3
+x6 Q net1 RST VP VN Qb NAND3
+x4 net2 Clk net4 VP VN net1 NAND3
+x5 net1 D RST VP VN net4 NAND3
+x1 Qb net2 Q VP VN NAND
+.ends
+
+
+* expanding   symbol:  component/NAND2/NAND.sym # of pins=5
+** sym_path: /foss/designs/component/NAND2/NAND.sym
+** sch_path: /foss/designs/component/NAND2/NAND.sch
+.subckt NAND  B A Y VP VN
+*.iopin VP
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin VN
+XM1 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Y B VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 Y A net1 net1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 B VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  component/NAND3/NAND3.sym # of pins=6
+** sym_path: /foss/designs/component/NAND3/NAND3.sym
+** sch_path: /foss/designs/component/NAND3/NAND3.sch
+.subckt NAND3  A B C VP VN Y
+*.iopin VP
+*.iopin VN
+*.ipin A
+*.ipin B
+*.ipin C
+*.opin Y
+XM1 Y A net1 VN sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 B net2 VN sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net2 C VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 Y B VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 Y C VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end
