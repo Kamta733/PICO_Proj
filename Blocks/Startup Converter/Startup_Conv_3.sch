@@ -1089,12 +1089,9 @@ N 2370 -2420 2370 -2390 {
 lab=n1}
 N 2360 -2180 2390 -2180 {
 lab=t0}
-N 2350 -2350 2380 -2350 {
-lab=GND}
-N 2350 -2350 2350 -2290 {
-lab=GND}
-N 2350 -2290 2380 -2290 {
-lab=GND}
+N 2360 -2350 2380 -2350 {}
+N 2360 -2350 2360 -2290 {}
+N 2360 -2290 2380 -2290 {}
 C {devices/vsource.sym} 70 -1990 0 0 {name=V1 value=200m}
 C {devices/lab_pin.sym} 70 -2020 1 0 {name=l3 sig_type=std_logic lab=Vs}
 C {devices/gnd.sym} 70 -1960 0 0 {name=l4 lab=GND}
