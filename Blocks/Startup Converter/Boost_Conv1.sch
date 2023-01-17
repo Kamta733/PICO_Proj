@@ -5,15 +5,15 @@ K {}
 V {}
 S {}
 E {}
-N 1980 -760 2180 -760 {
+N 1980 -740 2180 -740 {
 lab=Vg}
 N 1800 -950 1870 -950 {
 lab=Vi}
-N 2220 -760 2250 -760 {
+N 2220 -740 2250 -740 {
 lab=GND}
-N 2250 -760 2250 -710 {
+N 2250 -740 2250 -690 {
 lab=GND}
-N 2220 -710 2250 -710 {
+N 2220 -690 2250 -690 {
 lab=GND}
 N 2100 -950 2130 -950 {
 lab=#net1}
@@ -59,23 +59,23 @@ N 2600 -770 2710 -770 {
 lab=GND}
 N 2710 -890 2710 -770 {
 lab=GND}
-N 2220 -730 2220 -710 {
+N 2220 -710 2220 -690 {
 lab=GND}
 N 2430 -950 2430 -870 {
 lab=GND}
 N 2430 -870 2460 -870 {
 lab=GND}
-N 1920 -760 1980 -760 {
+N 1920 -740 1980 -740 {
 lab=Vg}
 N 2190 -950 2220 -950 {
-lab=#net3}
+lab=Vg}
 N 1930 -950 2040 -950 {
-lab=#net4}
-N 2220 -950 2220 -790 {
 lab=#net3}
-N 2220 -710 2220 -690 {
+N 2220 -690 2220 -670 {
 lab=GND}
-C {devices/gnd.sym} 2220 -690 0 0 {name=l2 lab=GND}
+N 2220 -950 2220 -770 {
+lab=Vg}
+C {devices/gnd.sym} 2220 -670 0 0 {name=l2 lab=GND}
 C {devices/ind.sym} 2070 -950 1 0 {name=L2
 m=1
 value=4m
@@ -90,7 +90,7 @@ m=1
 value=22u
 footprint=1206
 device="ceramic capacitor"}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 2200 -760 0 0 {name=M4
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 2200 -740 0 0 {name=M4
 L=0.15
 W=20
 nf=1
@@ -119,9 +119,9 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {devices/vsource.sym} 1800 -920 0 0 {name=V2 value=200m}
-C {devices/gnd.sym} 1920 -700 0 0 {name=l1 lab=GND}
+C {devices/gnd.sym} 1920 -680 0 0 {name=l1 lab=GND}
 C {devices/gnd.sym} 1800 -890 0 0 {name=l7 lab=GND}
-C {devices/lab_pin.sym} 1920 -760 1 0 {name=l8 sig_type=std_logic lab=Vg}
+C {devices/lab_pin.sym} 1920 -740 1 0 {name=l8 sig_type=std_logic lab=Vg}
 C {devices/code.sym} 3110 -1180 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -161,7 +161,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/vsource.sym} 1920 -730 0 0 {name=V3 value=0.65}
+C {devices/vsource.sym} 1920 -710 0 0 {name=V3 value=0.7}
 C {devices/ammeter.sym} 2160 -950 3 0 {name=Vmeas}
 C {devices/res.sym} 1900 -950 1 0 {name=R1
 value=1
