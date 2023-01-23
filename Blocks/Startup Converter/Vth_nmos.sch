@@ -35,7 +35,7 @@ C {devices/gnd.sym} 400 -200 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 240 -260 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 240 -320 1 0 {name=l8 sig_type=std_logic lab=Vg}
 C {devices/vsource.sym} 240 -290 0 0 {name=Vgs value=1}
-C {devices/vsource.sym} 310 -450 1 0 {name=Vdd value=1.2}
+C {devices/vsource.sym} 310 -450 1 0 {name=Vdd value=0.1}
 C {devices/gnd.sym} 240 -440 0 0 {name=l3 lab=GND}
 C {devices/code.sym} 530 -350 0 0 {name=TT_MODELS
 only_toplevel=true

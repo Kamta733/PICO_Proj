@@ -46,9 +46,9 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 240 -260 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 240 -320 1 0 {name=l8 sig_type=std_logic lab=Vg}
-C {devices/vsource.sym} 240 -290 0 0 {name=Vgs value=0.7}
+C {devices/vsource.sym} 240 -290 0 0 {name=Vgs value=1}
 C {devices/ammeter.sym} 400 -400 0 0 {name=Vmeas}
-C {devices/vsource.sym} 310 -450 1 0 {name=Vdd value=1.2}
+C {devices/vsource.sym} 310 -450 1 0 {name=Vdd value=0.1}
 C {devices/gnd.sym} 240 -440 0 0 {name=l3 lab=GND}
 C {devices/code.sym} 540 -370 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -62,6 +62,6 @@ spice_ignore=false}
 C {devices/code_shown.sym} 490 -540 0 0 {name=SPICE only_toplevel=false value=".tran 10u 100m
 .control
 run
-print @m.xm4.msky130_fd_pr__nfet_01v8_lvt[gm]
+print @m.xm4.msky130_fd_pr__nfet_01v8_lvt[vth]
 .endc
 .save all"}
